@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import TransitionLink from "@/components/utils/TransitionLink";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +22,9 @@ export default function RootLayout({
         <main className="min-h-screen flex flex-col p-8">
           <div className="text-2xl text-white flex items-center">
             <div className="rounded-full w-8 h-8 mr-2 brand-gradient"></div>
-            <Link href="/" className="">
-              tailwindcss colorgen
-            </Link>
+            <TransitionLink href="/">tailwindcss colorgen</TransitionLink>
           </div>
-          {children}
+          <div id="app-content">{children}</div>
         </main>
       </body>
     </html>

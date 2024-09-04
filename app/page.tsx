@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import TransitionLink from "@/components/utils/TransitionLink";
 import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -43,11 +44,11 @@ export default function Home() {
           </CardTitle>
         </CardHeader>
         <CardFooter className="flex justify-center">
-          <Link href="/gen">
+          <TransitionLink href="/gen">
             <Button className="w-[200px] bg-white text-black hover:bg-gray-300 active:bg-gray-500">
               Get Started
             </Button>
-          </Link>
+          </TransitionLink>
         </CardFooter>
         <CardContent>
           <SyntaxHighlighter

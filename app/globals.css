@@ -19,6 +19,32 @@ body {
   color: rgb(231, 228, 235);
 }
 
+.exit {
+  animation: onExit 500ms ease-in forwards;
+}
+
+@keyframes onExit {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+.enter {
+  animation: onEnter 500ms ease-in-out;
+}
+
+@keyframes onEnter {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
