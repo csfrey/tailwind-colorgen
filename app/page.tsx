@@ -36,7 +36,7 @@ module.exports = {
 export default function Home() {
   return (
     <div className="grow flex justify-center text-white">
-      <Card className="w-[700px] bg-transparent text-white shadow border-none">
+      <Card className="w-full max-w-[700px] bg-transparent text-white">
         <CardHeader>
           <CardTitle className="text-4xl text-center">
             Generate color palettes for tailwindcss
@@ -53,7 +53,7 @@ export default function Home() {
           <SyntaxHighlighter
             language="javascript"
             style={gradientDark}
-            className="rounded-lg shadow-xl mx-auto"
+            className="rounded-lg shadow mx-auto"
           >
             {exampleText}
           </SyntaxHighlighter>
