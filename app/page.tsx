@@ -36,7 +36,7 @@ module.exports = {
 
 export default function Home() {
   return (
-    <div className="grow flex justify-center text-white">
+    <div className="grow flex justify-center text-white mt-12">
       <Card className="w-full max-w-[700px] bg-transparent text-white">
         <CardHeader>
           <CardTitle className="text-4xl text-center">
@@ -44,8 +44,8 @@ export default function Home() {
           </CardTitle>
         </CardHeader>
         <CardFooter className="flex justify-center">
-          <TransitionLink href="/gen">
-            <Button className="w-[200px] bg-white text-black hover:bg-gray-300 active:bg-gray-500">
+          <TransitionLink href="/settings">
+            <Button className="w-[200px] bg-white text-black hover:bg-gray-300 active:bg-gray-400">
               Get Started
             </Button>
           </TransitionLink>

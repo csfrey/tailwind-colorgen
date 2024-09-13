@@ -7,13 +7,19 @@ import { MouseEventHandler } from "react";
 interface TransitionLinkProps extends LinkProps {
   children: React.ReactNode;
   href: string;
+  className?: string;
 }
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const TransitionLink = ({ children, href, ...props }: TransitionLinkProps) => {
+const TransitionLink = ({
+  className,
+  children,
+  href,
+  ...props
+}: TransitionLinkProps) => {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -32,13 +38,17 @@ const TransitionLink = ({ children, href, ...props }: TransitionLinkProps) => {
     router.push(href);
     appContent?.classList.add("enter");
     await sleep(500);
-
     appContent?.classList.remove("enter");
     appContent?.classList.remove("exit");
   }
 
   return (
-    <Link onClick={handleTransition} href={href} {...props}>
+    <Link
+      onClick={handleTransition}
+      href={href}
+      className={className}
+      {...props}
+    >
       {children}
     </Link>
   );
